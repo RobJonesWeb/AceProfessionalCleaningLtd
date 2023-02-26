@@ -35,7 +35,7 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark" style="background: #212529">
     <div class="container">
-        <a class="row col-12 text-center"
+        <a class="row col-auto text-center"
            href="/">
             <img src="/wp-content/uploads/2022/11/logo.png" class="img-fluid" width="84"
                  height="50" alt="Company Brand">
