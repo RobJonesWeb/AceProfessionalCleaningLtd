@@ -20,15 +20,6 @@ function remove_default_post_type($user) {
         remove_menu_page('admin.php');
     }
 }
-
-// hide ACF menus for all users except those specified
-function show_hide_acf_menu( $show ) {
-    if ( !in_array( 'ace_staff', (array) $user->roles ) ) {
-        return true;
-    } else {
-        return false;
-    }
-}
 add_action( 'plugins_loaded', function() use ($user) {
     'remove_default_post_type' ( $user );
 });
