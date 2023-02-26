@@ -9,7 +9,7 @@ get_header();
                  src="https://img.freepik.com/premium-vector/biohazard-symbol-label-yellow-isolated_5205-56.jpg?w=2000"
                  alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">Biohazard &amp; Trauma</h5>
+                <h5 class="card-title">Biohazard &amp Trauma</h5>
                 <p class="card-text">Operating at a highly qualified level, we provide a Biohazard & Trauma service
                     focussing purely from a safety aspect, providing competitive rates</p>
             </div>
