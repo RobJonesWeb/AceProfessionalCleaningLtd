@@ -25,7 +25,7 @@
 
         @media screen and (max-width: 600px) {
             #heroCarousel img {
-                height: 500px;
+                height: 300px;
             }
         }
 
@@ -35,10 +35,10 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark" style="background: #212529">
     <div class="container">
-
+        <?php if(false) { ?>
         <a class="d-block d-md-none navbar-brand col-6 col-md-2 me-auto text-center text-md-start mb-3 mb-md-0"
            href="javascript:void(0)">
-            <img src="/wp-content/uploads/2022/11/logo.png" class="img-fluid" width="168"
+            <img src="/wp-content/uploads/2022/11/logo.png" class="img-fluid" width="84"
                  height="50" alt="Company Brand">
         </a>
         <button class="navbar-toggler ms-auto border-0 mx-4 py-md-0" type="button" data-bs-toggle="collapse"
@@ -46,12 +46,14 @@
                 aria-expanded="false" aria-label="Toggle Navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+        <?php } ?>
         <div class="collapse navbar-collapse" data-bs-target="navbar" id="navbar-collapse">
             <a class="d-none d-md-block navbar-brand col-6 col-md-2 me-auto text-center text-md-start mb-3 mb-md-0"
                href="javascript:void(0)">
-                <img src="/wp-content/uploads/2022/11/logo.png" class="img-fluid" width="168"
+                <img src="/wp-content/uploads/2022/11/logo.png" class="img-fluid" width="84"
                      height="50" alt="Company Brand">
             </a>
+            <?php if(false) { ?>
             <ul class="navbar-nav col-10 col-md-8 fw-bold">
                 <li class="nav-item px-2">
                     <a class="nav-link text-light" href="javascript:void(0)">Services</a>
@@ -74,6 +76,7 @@
                     </li>
                 </div>
             </ul>
+            <?php } ?>
         </div>
     </div>
 </nav>
@@ -81,48 +84,26 @@
 <!-- End Navbar -->
 
 <!-- Carousel -->
+<?php if( have_rows('carousel_slide') ): $carouselSlide = 1 ?>
 <section id="heroCarousel" class="carousel-container p-0 m-0">
     <div class="carousel slide carousel-fade" data-ride="carousel">
         <div class="carousel-inner mh-75">
-            <div class="carousel-item active">
-                <img class="d-block w-100"
-                     data-src="holder.js/800x400?auto=yes&amp;bg=777&amp;fg=555&amp;text=First slide"
-                     alt="First slide [800x400]"
-                     src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_18468e71daa%20text%20%7B%20fill%3A%23555%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_18468e71daa%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22285.921875%22%20y%3D%22217.7%22%3EFirst%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
-                     data-holder-rendered="true">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                    <a href="javascript:void(0)" class="btn btn-lg btn-primary">Go here</a>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100"
-                     data-src="holder.js/800x400?auto=yes&amp;bg=777&amp;fg=555&amp;text=Second slide"
-                     alt="Second slide [800x400]"
-                     src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_18468e71daa%20text%20%7B%20fill%3A%23555%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_18468e71daa%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22285.921875%22%20y%3D%22217.7%22%3ESecond%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
-                     data-holder-rendered="true">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Second slide label</h5>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                    <a href="javascript:void(0)" class="btn btn-lg btn-primary">Go here</a>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100"
-                     data-src="holder.js/800x400?auto=yes&amp;bg=777&amp;fg=555&amp;text=Third slide"
-                     alt="Third slide [800x400]"
-                     src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_18468e71daa%20text%20%7B%20fill%3A%23555%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_18468e71daa%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22285.921875%22%20y%3D%22217.7%22%3EThird%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
-                     data-holder-rendered="true">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                    <a href="javascript:void(0)" class="btn btn-lg btn-primary">Go here</a>
-                </div>
+            <?php while( have_rows('carousel_slide') ) : the_row(); $carousel_image = get_sub_field('carousel_image')?>
+                    <div class="carousel-item <?= $carouselSlide === 1 ? 'active' : ''?> ">
+                        <img class="d-block w-100"
+                            src=<?= $carousel_image['url'] ?>
+                            data-holder-rendered="true">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5><?php the_sub_field('carousel_header') ?></h5>
+                            <p><?php the_sub_field('carousel_caption') ?></p>
+                        </div>
+                    </div>
+                <?php $carouselSlide++ ?>
+                <?php endwhile; ?>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+<?php endif; ?>
 <!-- End Carousel -->
 
 <!-- Pre-Header -->
