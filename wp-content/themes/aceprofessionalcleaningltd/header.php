@@ -35,49 +35,11 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark" style="background: #212529">
     <div class="container">
-        <?php if(false) { ?>
-        <a class="d-block d-md-none navbar-brand col-6 col-md-2 me-auto text-center text-md-start mb-3 mb-md-0"
-           href="javascript:void(0)">
+        <a class="row col-12 text-center"
+           href="/">
             <img src="/wp-content/uploads/2022/11/logo.png" class="img-fluid" width="84"
                  height="50" alt="Company Brand">
         </a>
-        <button class="navbar-toggler ms-auto border-0 mx-4 py-md-0" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbar-collapse" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle Navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <?php } ?>
-        <div class="collapse navbar-collapse" data-bs-target="navbar" id="navbar-collapse">
-            <a class="d-none d-md-block navbar-brand col-6 col-md-2 me-auto text-center text-md-start mb-3 mb-md-0"
-               href="javascript:void(0)">
-                <img src="/wp-content/uploads/2022/11/logo.png" class="img-fluid" width="84"
-                     height="50" alt="Company Brand">
-            </a>
-            <?php if(false) { ?>
-            <ul class="navbar-nav col-10 col-md-8 fw-bold">
-                <li class="nav-item px-2">
-                    <a class="nav-link text-light" href="javascript:void(0)">Services</a>
-                </li>
-                <li class="nav-item px-2">
-                    <a class="nav-link text-light" href="javascript:void(0)">About Ace</a>
-                </li>
-                <li class="nav-item px-2">
-                    <a class="nav-link text-light" href="javascript:void(0)">Contact Us</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav col-12 col-md-2">
-                <div class="row text-center text-md-start p-3 p-md-0">
-                    <li class="nav-item col-4 col-md px-2">
-                        <a class="nav-link text-light" href="javascript:void(0)"><i class="fa-solid fa-1x fa-phone"></i></a>
-                    </li>
-                    <li class="nav-item col-4 col-md px-2">
-                        <a class="nav-link text-light" href="javascript:void(0)"><i
-                                    class="fa-solid fa-1x fa-envelope"></i></a>
-                    </li>
-                </div>
-            </ul>
-            <?php } ?>
-        </div>
     </div>
 </nav>
 
@@ -99,7 +61,7 @@
                         </div>
                     </div>
                 <?php $carouselSlide++ ?>
-                <?php endwhile; ?>
+            <?php endwhile; ?>
             </div>
         </div>
     </section>
