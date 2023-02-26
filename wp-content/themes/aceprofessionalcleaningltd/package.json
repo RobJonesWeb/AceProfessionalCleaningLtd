@@ -1,0 +1,16 @@
+{
+  "name": "aceprofessionalcleaningltd",
+  "version": "0.0.1",
+  "description": "Custom Theme for Ace Professional Cleaning Ltd",
+  "scripts": {
+    "build": "webpack --mode=development --progress --config assets/config/webpack.config.js",
+    "watch": "webpack --hide-modules --watch --config assets/config/webpack.config.js",
+    "prod": "webpack --mode=peoduction --progress -p --config assets/config/webpack.config.js"
+  },
+  "author": "RobJonesWeb",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "dependencies": {
+    "bootstrap": "^5.2.2",
+    "slick-carousel": "^1.8.1"
+  }
+}
