@@ -15,6 +15,12 @@
     <?php wp_head(); ?>
 
     <style>
+        .carousel-item img {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            object-position: 50% 50%;
+        }
         .usp-image {
             width: 128px;
         }
@@ -23,9 +29,22 @@
             width: 40px
         }
 
+        .carousel-caption {
+            right: 0!important;
+            bottom: 45% !important;
+            text-align:left!important;
+        }
+
+
         @media screen and (max-width: 600px) {
             #heroCarousel img {
                 height: 300px;
+            }
+
+            .carousel-caption {
+                right: 0!important;
+                bottom: 45% !important;
+                text-align:left!important;
             }
         }
 
@@ -55,9 +74,9 @@
                         <img class="d-block w-100"
                             src=<?= $carousel_image['url'] ?>
                             data-holder-rendered="true">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5><?php the_sub_field('carousel_header') ?></h5>
-                            <p><?php the_sub_field('carousel_caption') ?></p>
+                        <div class="carousel-caption">
+                            <h3><?php the_sub_field('carousel_header') ?></h5>
+                            <p class="h5"><?php the_sub_field('carousel_caption') ?></p>
                         </div>
                     </div>
                 <?php $carouselSlide++ ?>

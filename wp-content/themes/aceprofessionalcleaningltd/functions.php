@@ -1,6 +1,7 @@
 <?php
 
 $roots_includes = [
+    '/inc/functions/cpt.php',
     '/inc/functions/styles.php',
     '/inc/functions/scripts.php',
     '/inc/functions/rjw.php'

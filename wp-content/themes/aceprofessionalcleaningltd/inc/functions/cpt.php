@@ -1,10 +1,17 @@
 <?php
 
-function createServices() {
-    $cpt = [
+$cpts = [
+    [
         'singular' => 'service',
-        'plural' => 'services',
-    ];
+        'plural' => 'services'
+    ],
+    [
+        'singular' => 'option',
+        'plural' => 'options'
+    ]
+];
+function registerCpt( $cpt ) {
+
     $labels = array(
         'name'               => _x( ucwords($cpt['plural']), 'post type general name' ),
         'singular_name'      => _x( ucwords($cpt['singular']), 'post type singular name' ),
@@ -18,16 +25,23 @@ function createServices() {
         'not_found'          => __( "No {$cpt['plural']} found" ),
         'not_found_in_trash' => __( "No {$cpt['plural']} found in the trash" ),
         //'parent_item_colon'  => ’,
-        'menu_name'          => 'Services'
+        'menu_name'          => ucwords($cpt['plural']),
+        'taxonomies'	     => $cpt['singular']
     );
     $args = array(
         'labels'        => $labels,
         'description'   => "Holds our {$cpt['singular']} and {$cpt['singular']} specific data",
         'public'        => true,
         'menu_position' => 5,
-        'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
+        'supports'      => array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail', 'page-attributes' ),
         'has_archive'   => true,
     );
-    register_post_type( "{$cpt['singular']}", $args );
+    register_post_type( $cpt['singular'], $args );
 }
-add_action( 'init', 'createServices' );
+
+foreach ( $cpts as $cpt ) {
+    add_action( 'init', function() use ( $cpt ) {
+        registerCpt ( $cpt );
+    });
+}
+
